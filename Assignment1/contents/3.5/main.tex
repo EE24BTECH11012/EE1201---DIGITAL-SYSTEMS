@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb, graphicx}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\renewcommand{\thesection}{3.5}
+\title{Lecture Notes on Boolean Algebra}
+\author{Course: Discrete Mathematics}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\setcounter{section}{3}
+\section{Proving Validity of an Equation}
+
+Often, we need to determine whether an equation holds for all possible values of its variables. Several methods can be used to prove its validity:
+
+\begin{enumerate}
+    \item \textbf{Truth Table Method:} Construct a truth table and evaluate both sides of the equation for all combinations of variable values. This is not efficient for large numbers of variables.
+    \item \textbf{Algebraic Manipulation:} Use Boolean theorems to transform one side of the equation until it matches the other side.
+    \item \textbf{Reduction Method:} Independently simplify both sides of the equation to check if they reduce to the same expression.
+    \item \textbf{Applying Reversible Operations:} Perform the same operation on both sides of the equation, ensuring that the operation is reversible. For example, complementing both sides is valid, but multiplying both sides by an expression is not allowed in Boolean algebra.
+\end{enumerate}
+
+\subsection{Disproving an Equation}
+To show that an equation is \textit{not valid}, it is sufficient to find at least one assignment of variable values that results in different values on the two sides of the equation.
+
+\subsection{Useful Strategy for Proof}
+When using algebraic manipulation, the following strategy is helpful:
+
+\begin{enumerate}
+    \item Express both sides in \textit{sum of products} or \textit{product of sums} form.
+    \item Compare the two sides for equality.
+    \item Add or simplify terms logically to make both sides match.
+    \item Continue until the expressions are identical.
+\end{enumerate}
+
+\subsection{Cancellation Law in Boolean Algebra}
+
+Some theorems of Boolean algebra do not hold in ordinary algebra and vice versa. One such case is the cancellation law:
+
+\subsection{Addition Cancellation Law}
+In ordinary algebra, the cancellation law states:
+\[
+    x + y = x + z \Rightarrow y = z
+\]
+However, this is not true in Boolean algebra. For example, let:
+\[ x = 1, y = 0, z = 1 \]
+Then,
+\[
+    1 + 0 = 1 + 1, \quad \text{but} \quad 0 \neq 1
+\]
+Thus, the cancellation law does not hold in Boolean algebra.
+
+\subsection{Multiplication Cancellation Law}
+In ordinary algebra, the cancellation law for multiplication states:
+\[
+    xy = xz \Rightarrow y = z, \quad \text{if } x \neq 0
+\]
+In Boolean algebra, this law does not hold when \( x = 0 \). For example, if \( x = 0, y = 0, z = 1 \), then:
+\[
+    0 \cdot 0 = 0 \cdot 1, \quad \text{but} \quad 0 \neq 1
+\]
+Because \( x = 0 \) occurs frequently in Boolean algebra, the cancellation law for multiplication is not valid.
+
+\subsection{Converse Statements}
+Although the cancellation laws are generally false in Boolean algebra, their converses are true:
+\[
+    y = z \Rightarrow x + y = x + z
+\]
+\[
+    y = z \Rightarrow xy = xz
+\]
+This means that adding the same term to both sides of a Boolean equation or multiplying both sides by the same term results in a valid equation. However, the reverse is not true: subtracting or dividing both sides by the same term is not permissible, as these operations are not reversible in Boolean algebra.
+
+\end{document}
+
