@@ -1,0 +1,29 @@
+\section{Map Method} 
+
+\begin{itemize}
+    \item The complexity of digital logic gates depends on the algebraic expression of a Boolean function. 
+    \item While truth tables provide a unique representation, Boolean expressions can have multiple equivalent forms. 
+    \item Algebraic simplification is possible but lacks systematic rules. 
+    \item The \color{blue} Karnaugh map (K-map) \color{black} method offers a visual way to minimize Boolean functions by grouping minterms efficiently. It allows users to derive simpler expressions, reducing the number of gates and inputs required in a circuit. 
+    \item The minimized expressions follow either the sum of products or product of sums form. Multiple minimal expressions may exist, and any valid solution is acceptable.
+\end{itemize}
+
+\subsection{Two Variable k-map}
+\begin{itemize}
+    \item A two-variable Karnaugh map (K-map) consists of four squares, each representing a minterm of the two variables  $x$  and  $y$ . 
+    \item The map visually organizes these \textbf{minterms}, with rows and columns corresponding to the variable values. By marking the squares containing minterms of a given Boolean function, the K-map provides an intuitive way to represent any of the 16 possible Boolean functions for two variables. 
+    \item For example, the function  $xy$  is represented by marking the minterm  $m_3$ , while  $x + y $ is represented by marking minterms  $m_1, m_2$,  and  $m_3$ . This visualization helps in understanding Boolean expressions and their simplifications.
+\end{itemize}
+
+\subsection{Three Variable k-Map}
+
+\begin{itemize}
+    \item A three-variable Karnaugh map (K-map) consists of eight squares, each representing a minterm of three binary variables. 
+    \item The minterms are arranged in a sequence similar to the \color{blue} Gray code \color{black} , ensuring that only one variable changes between adjacent squares. Each square corresponds to a unique minterm, with variables labeled to indicate their presence or complement.\\\\
+\end{itemize}
+
+\begin{itemize}
+    \item The key property of the K-map is that adjacent squares differ by only one variable, allowing for Boolean simplifications. 
+    \item When two adjacent minterms are summed, the differing variable is eliminated, reducing the expression. 
+    \item For example, summing minterms  $m_5$  and  $m_7$  simplifies to  $xz$ . This property makes the K-map a powerful tool for minimizing Boolean functions efficiently.
+\end{itemize}
