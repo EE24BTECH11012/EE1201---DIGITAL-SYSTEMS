@@ -1,24 +1,24 @@
 \section{\textbf{Algebraic Simplification of Switching Expressions}}
 
-\begin{enumerate}[label=\textbf{\textdagger}]
+\begin{itemize}
 \item Simplification of switching Boolean expressions algebraically are done based on the following properties - \\
 \begin{align}
 	XY + XY^{\prime} &= X  \text{ Combining terms } \label{eq:1}\\
 	X + XY &= X \text{ Eliminating terms } \label{eq:2}\\
 	X + X^{\prime} Y &= X + Y \text{ Eliminating literals } \label{eq:3}
 \end{align}
-\item Simplification can, sometimes, also be done by adding some redundant terms like, 
+\item Simplification can, sometimes, also be done by, 
 \begin{align}
 	\text{ Addition of } xx^{\prime} \label{eq:4}\\
 	\text{ Multiplying by } x + x^{\prime} \label{eq:5}\\
 	\text{ Adding } yz \text{ to } xy + x^{\prime} z \label{eq:6}
 \end{align}
-\item Examples :
+\item \textbf{Examples :}
 	\begin{enumerate}
 		\item WX + XY + X^{\prime} Z^{\prime} + WY^{\prime} Z^{\prime} \\
 			\begin{align}
 				F &= WX + XY + X^{\prime} Z^{\prime} + WY^{\prime} Z^{\prime} \\
-				&= WX + XY + X^{\prime} Z^{\prime} + WY^{\prime} Z^{\prime} + WZ^{\prime} \text{ by CONSENSUS theorem } \\
+				&= WX + XY + X^{\prime} Z^{\prime} + WY^{\prime} Z^{\prime} + WZ^{\prime} \text{ from } \eqref{eq:con} \\
 				&= WX + XY + X^{\prime} Z^{\prime} WZ^{\prime} \text{ from  } \eqref{eq:2} \\
 				&= WX + XY + X^{\prime} Z^{\prime} \text{ from } \eqref{eq:2}
 			\end{align}

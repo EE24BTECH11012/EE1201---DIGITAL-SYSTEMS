@@ -1,6 +1,6 @@
-\section*{3.3 Consensus Theorem}
-
-The Consensus Theorem is very useful in simplifying Boolean expressions. Given an expression of the form:
+\section{Consensus Theorem}
+\begin{itemize}
+\item The Consensus Theorem is very useful in simplifying Boolean expressions. Given an expression of the form:
 \[
 XY + X'Z + YZ,
 \]
@@ -8,9 +8,12 @@ the term \( YZ \) is redundant and can be eliminated to form the equivalent expr
 \[
 XY + X'Z.
 \]
-The term that was eliminated is referred to as the \textbf{consensus term}. Given a pair of terms where a variable appears in one term and the complement of that variable in another, the consensus term is formed by multiplying the two original terms together while leaving out the selected variable and its complement.
 
-For example:
+\item The term that was eliminated is referred to as the \color{blue} consensus term \color{black}. 
+\item Given a pair of terms where a variable appears in one term and the complement of that variable in another, the consensus term is formed by multiplying the two original terms together while leaving out the selected variable and its complement.
+\end{itemize}
+
+\textbf{For example:}
 \begin{itemize}
     \item The consensus of \( ab \) and \( a'c \) is \( bc \).
     \item The consensus of \( abd \) and \( b'de' \) is \( ade' \), since:
@@ -21,9 +24,9 @@ For example:
 \end{itemize}
 
 The consensus theorem, as given in Equation (2-18), is:
-\[
-XY + X'Z + YZ = XY + X'Z.
-\]
+\begin{align}
+XY + X'Z + YZ = XY + X'Z. \label{eq:con}
+\end{align}
 
 \subsection{Dual Form of Consensus Theorem}
 The dual form of the theorem is given by:
@@ -46,13 +49,16 @@ For example:
 Here, \( a + b + d' \) is a consensus term and can be eliminated.
 
 \subsection{Example Application}
-Given the Boolean expression:
+\begin{itemize}
+\item Given the Boolean expression:
 \[
 AC'D + A'BD + BCD + ABC + ACD'.
 \]
-Using the Consensus Theorem, redundant terms can be removed step by step. The order of elimination affects the final simplification.
 
-In some cases, additional terms may need to be added before applying the theorem effectively. For example:
+\item Using the Consensus Theorem, redundant terms can be removed step by step. The order of elimination affects the final simplification.
+
+\item In some cases, additional terms may need to be added before applying the theorem effectively. 
+\item For example:
 \[
 F = ABCD + B'CDE + A'B' + BCE'.
 \]
@@ -61,6 +67,11 @@ By adding the consensus term \( ACDE \), we can further simplify the expression 
 F = A'B' + BCE' + ACDE.
 \]
 Thus, the term \( ACDE \) is essential and cannot be removed.
+\end{itemize}
 
 \subsection{Conclusion}
-The Consensus Theorem is a powerful tool in Boolean algebra that helps simplify expressions by removing redundant terms. Recognizing consensus terms and applying the theorem properly can significantly reduce the complexity of logical expressions, which is beneficial in digital circuit design and optimization. By understanding and utilizing this theorem effectively, one can achieve minimal representations of Boolean functions efficiently.
+\begin{itemize}
+\item The Consensus Theorem is a powerful tool in Boolean algebra that helps simplify expressions by removing redundant terms. 
+\item Recognizing consensus terms and applying the theorem properly can significantly reduce the complexity of logical expressions, which is beneficial in digital circuit design and optimization. 
+\item By understanding and utilizing this theorem effectively, one can achieve minimal representations of Boolean functions efficiently.
+\end{itemize}

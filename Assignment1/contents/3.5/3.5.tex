@@ -1,30 +1,30 @@
-\section*{3.5 Proving Validity of an Equation}
+\section{Proving Validity of an Equation}
 
 Often, we need to determine whether an equation holds for all possible values of its variables. Several methods can be used to prove its validity:
 
-\begin{enumerate}
+\begin{itemize}
     \item \textbf{Truth Table Method:} Construct a truth table and evaluate both sides of the equation for all combinations of variable values. This is not efficient for large numbers of variables.
     \item \textbf{Algebraic Manipulation:} Use Boolean theorems to transform one side of the equation until it matches the other side.
     \item \textbf{Reduction Method:} Independently simplify both sides of the equation to check if they reduce to the same expression.
     \item \textbf{Applying Reversible Operations:} Perform the same operation on both sides of the equation, ensuring that the operation is reversible. For example, complementing both sides is valid, but multiplying both sides by an expression is not allowed in Boolean algebra.
-\end{enumerate}
+\end{itemize}
 
 \subsection{Disproving an Equation}
-To show that an equation is \textit{not valid}, it is sufficient to find at least one assignment of variable values that results in different values on the two sides of the equation.
+To show that an equation is \color{blue} not valid \color{black}, it is sufficient to find at least one assignment of variable values that results in different values on the two sides of the equation.
 
 \subsection{Useful Strategy for Proof}
 When using algebraic manipulation, the following strategy is helpful:
 
-\begin{enumerate}
-    \item Express both sides in \textit{sum of products} or \textit{product of sums} form.
+\begin{itemize}
+    \item Express both sides in \color{blue} sum of products \color{black} or \color{blue} product of sums \color{black} form.
     \item Compare the two sides for equality.
     \item Add or simplify terms logically to make both sides match.
     \item Continue until the expressions are identical.
-\end{enumerate}
+\end{itemize}
 
 \subsection{Cancellation Law in Boolean Algebra}
 
-Some theorems of Boolean algebra do not hold in ordinary algebra and vice versa. One such case is the cancellation law:
+Some theorems of Boolean algebra do not hold in ordinary algebra and vice versa. One such case is the \color{blue} cancellation law: \color{black}
 
 \subsection{Addition Cancellation Law}
 In ordinary algebra, the cancellation law states:
@@ -37,7 +37,7 @@ Then,
 \[
     1 + 0 = 1 + 1, \quad \text{but} \quad 0 \neq 1
 \]
-Thus, the cancellation law does not hold in Boolean algebra.
+Thus, the \textbf{cancellation law does not hold in Boolean algebra}.
 
 \subsection{Multiplication Cancellation Law}
 In ordinary algebra, the cancellation law for multiplication states:
@@ -48,7 +48,7 @@ In Boolean algebra, this law does not hold when \( x = 0 \). For example, if \( 
 \[
     0 \cdot 0 = 0 \cdot 1, \quad \text{but} \quad 0 \neq 1
 \]
-Because \( x = 0 \) occurs frequently in Boolean algebra, the cancellation law for multiplication is not valid.
+Because \( x = 0 \) occurs frequently in Boolean algebra, \textbf{the cancellation law for multiplication is not valid}.
 
 \subsection{Converse Statements}
 Although the cancellation laws are generally false in Boolean algebra, their converses are true:
@@ -58,4 +58,7 @@ Although the cancellation laws are generally false in Boolean algebra, their con
 \[
     y = z \Rightarrow xy = xz
 \]
-This means that adding the same term to both sides of a Boolean equation or multiplying both sides by the same term results in a valid equation. However, the reverse is not true: subtracting or dividing both sides by the same term is not permissible, as these operations are not reversible in Boolean algebra.
+\begin{itemize}
+\item This means that adding the same term to both sides of a Boolean equation or multiplying both sides by the same term results in a valid equation. 
+\item However, the reverse is not true: subtracting or dividing both sides by the same term is not permissible, as these operations are not reversible in Boolean algebra.
+\end{itemize}

@@ -1,44 +1,51 @@
-\section*{3.1 Multiplying Out and Factoring Expressions}
-Following theorems are useful in factoring and multiplying out (Very Useful for Bolean Expression Manipulation):
+\section{Multiplying Out and Factoring Expressions}
+Following theorems are useful in factoring and multiplying out (Very Useful for Boolean Expression Manipulation):
 \begin{align}
-    X(Y + Z) = XY + XZ\\
-    (X + Y)(X + Z) = X + YZ \label{eq:2}\\
-    (X+Y)(X^\prime+Z)=XZ+X^\prime Y \label{eq:3}
+    X(Y + Z) &= XY + XZ\\
+    (X + Y)(X + Z) &= X + YZ \label{eq:2}\\
+    (X+Y)(X^\prime+Z) &= XZ+X^\prime Y \label{eq:3}
 \end{align}
-\subsection*{Proving}
+\subsection{Proving}
 Theorem \ref{eq:2}:
-\begin{align*}
+\begin{align}
     (X + Y)(X + Z)&=X+XY+XZ+YZ\\
     &=X(1+Y+Z)+YZ\\
     &=X+YZ
-\end{align*}
+\end{align}
 Theorem \ref{eq:3}:
-\begin{align*}
-    (X+Y)(X^\prime+Z)=0+XZ+YX^\prime + YZ\\
-\end{align*}
+\begin{align}
+    (X+Y)(X^\prime+Z)&=0+XZ+YX^\prime + YZ\\
+\end{align}
 Putting X=0
-\begin{align*}
+\begin{align}
     X&=0\\
     Y&=Y+YZ\\
     Y&=Y
-\end{align*}
+\end{align}
 Putting X=1
-\begin{align*}
+\begin{align}
     X&=1\\
     Z&=Z+YZ\\
     Z&=Z
-\end{align*}
+\end{align}
 Hence Proved\\
-\subsection*{Examples}
-\begin{enumerate}
-    \item $(Q + AB^\prime)(C^\prime D + Q^\prime)$\\
-    Use \ref{eq:3}\\
-    $= QAB^\prime+Q^\prime C^\prime D$
-    \item $[(A + B + C^\prime)(A + B + D)](A + B + E)(A + D^\prime + E)(A^\prime + C)$\\
-    Using \ref{eq:2}\\
-    $=[(A + B + C^\prime D)(A + B + E)][(A + D^\prime + E)(A^\prime + C)]$\\
-    Using \ref{eq:2} and \ref{eq:3}\\
-    $=(A+B+C^\prime DE)(AC+A^\prime(D^\prime+E))$\\
-    $=[AC+ABC]+A^\prime BD^\prime +A^\prime BE+ A^\prime C^\prime DE$\\
-    $=AC+A^\prime BD^\prime +A^\prime BE+ A^\prime C^\prime DE$    
-\end{enumerate}
+\subsection{Examples}
+\begin{itemize}
+\item
+    $(Q + AB^\prime)(C^\prime D + Q^\prime) $ \\
+     \begin{align}
+    &= QC^\prime D + QQ^\prime + AB^\prime C^\prime D + AB^\prime Q^\prime \\
+    &= QC^\prime D + AB^\prime C^\prime D
+ \end{align}
+ \item
+    (A + B + C^\prime)(A + B + D)](A + B + E)(A + D^\prime + E)(A^\prime + C)\\
+    &\text{Using \ref{eq:2}}\\
+     \begin{align}
+    	&=[(A + B + C^\prime D)(A + B + E)][(A + D^\prime + E)(A^\prime + C)]
+    	\end{align}
+    \text{Using \ref{eq:2} and \ref{eq:3}}\\
+    \begin{align}
+    &=(A+B+C^\prime DE)(AC+A^\prime(D^\prime+E))\\
+    &=[AC+ABC]+A^\prime BD^\prime +A^\prime BE+ A^\prime C^\prime DE\\
+    &=AC+A^\prime BD^\prime +A^\prime BE+ A^\prime C^\prime DE    
+\end{align}

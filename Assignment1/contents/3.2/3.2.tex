@@ -13,13 +13,26 @@
     \item A two-variable Karnaugh map (K-map) consists of four squares, each representing a minterm of the two variables  $x$  and  $y$ . 
     \item The map visually organizes these \textbf{minterms}, with rows and columns corresponding to the variable values. By marking the squares containing minterms of a given Boolean function, the K-map provides an intuitive way to represent any of the 16 possible Boolean functions for two variables. 
     \item For example, the function  $xy$  is represented by marking the minterm  $m_3$ , while  $x + y $ is represented by marking minterms  $m_1, m_2$,  and  $m_3$ . This visualization helps in understanding Boolean expressions and their simplifications.
+ \begin{center}
+\begin{karnaugh-map}[2][2][1][$x$][$y$]
+    \manualterms{1,1,1,1}
+    \implicant{1}{3}
+\end{karnaugh-map}
+\end{center}
 \end{itemize}
 
 \subsection{Three Variable k-Map}
 
 \begin{itemize}
     \item A three-variable Karnaugh map (K-map) consists of eight squares, each representing a minterm of three binary variables. 
-    \item The minterms are arranged in a sequence similar to the \color{blue} Gray code \color{black} , ensuring that only one variable changes between adjacent squares. Each square corresponds to a unique minterm, with variables labeled to indicate their presence or complement.\\\\
+    \item The minterms are arranged in a sequence similar to the \color{blue} Gray code \color{black} , ensuring that only one variable changes between adjacent squares. Each square corresponds to a unique minterm, with variables labeled to indicate their presence or complement.\\
+    \begin{center}
+    \begin{karnaugh-map}[4][2][1][$xy$][$z$]
+    \manualterms{1,1,1,1}
+    \implicant{1}{3}
+    %\implicant{4}{6}
+\end{karnaugh-map}
+\end{center}
 \end{itemize}
 
 \begin{itemize}
